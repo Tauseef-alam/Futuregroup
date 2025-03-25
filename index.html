@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Group - Join & Chat</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-container {
+            width: 90%;
+            max-width: 400px;
+            margin: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px cyan;
+            text-align: center;
+        }
+
+        input, select, button {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input, select {
+            background: #333;
+            color: white;
+        }
+
+        button {
+            background: cyan;
+            color: black;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: darkcyan;
+        }
+
+        /* WhatsApp Style Chat */
+        .chat-container {
+            width: 90%;
+            max-width: 450px;
+            height: 80vh;
+            background: #1e1e1e;
+            border-radius: 10px;
+            display: none;
+            flex-direction: column;
+            box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .chat-header {
+            background: #075e54;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .chat-box {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message {
+            max-width: 75%;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 8px;
+            font-size: 14px;
+            position: relative;
+        }
+
+        .user-message {
+            background: #dcf8c6;
+            align-self: flex-end;
+            color: black;
+        }
+
+        .chat-input-area {
+            display: flex;
+            padding: 10px;
+            background: #075e54;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .chat-send {
+            padding: 10px 15px;
+            background: #25d366;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 5px;
+        }
+
+        .chat-send:hover {
+            background: #1ebf57;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Join Future Group</h2>
+    <div class="form-container">
+        <form id="joinForm">
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+
+            <label for="contact">Contact Number:</label><br>
+            <input type="text" id="contact" name="contact" placeholder="Enter your phone number" required><br>
+
+            <label for="role">Choose Your Role:</label><br>
+            <select id="role" name="role" required>
+                <option value="">Select One</option>
+                <option value="Game Developer">Game Developer</option>
+                <option value="Modder">Modder</option>
+                <option value="3D Artist">3D Artist</option>
+                <option value="Sound Designer">Sound Designer</option>
+                <option value="Story Writer">Story Writer</option>
+            </select><br>
+
+            <button type="submit">Join Now</button>
+        </form>
+    </div>
+
+</body>
+</html>
